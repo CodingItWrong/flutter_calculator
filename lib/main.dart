@@ -11,8 +11,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Flutter Calculator",
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.blue,
+          backgroundColor: Colors.black26,
+        ),
+        useMaterial3: false,
       ),
       home: const CalculatorHomePage(
         title: "Flutter Calculator",
@@ -61,20 +64,32 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
               children: [
                 Expanded(
                   flex: 3,
-                  child: ElevatedButton(
+                  child: OutlinedButton(
                     onPressed: () {
                       deleteAll();
                     },
-                    child: const Text('C'),
+                    style: OutlinedButton.styleFrom(
+                      backgroundColor: Colors.black54,
+                    ),
+                    child: const Text(
+                      'C',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
                 Expanded(
                   flex: 1,
-                  child: ElevatedButton(
+                  child: OutlinedButton(
                     onPressed: () {
                       deleteOne();
                     },
-                    child: const Text('<-'),
+                    style: OutlinedButton.styleFrom(
+                      backgroundColor: Colors.black87,
+                    ),
+                    child: const Text(
+                      '<-',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ],
@@ -96,19 +111,37 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('7');
                             },
-                            child: const Text('7'),
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.blueAccent,
+                            ),
+                            child: const Text(
+                              '7',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                           ExpandedButton(
                             onPressed: () {
                               add('8');
                             },
-                            child: const Text('8'),
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.blueAccent,
+                            ),
+                            child: const Text(
+                              '8',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                           ExpandedButton(
                             onPressed: () {
                               add('9');
                             },
-                            child: const Text('9'),
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.blueAccent,
+                            ),
+                            child: const Text(
+                              '9',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                         ],
                       ),
@@ -119,19 +152,37 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('4');
                             },
-                            child: const Text('4'),
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.blueAccent,
+                            ),
+                            child: const Text(
+                              '4',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                           ExpandedButton(
                             onPressed: () {
                               add('5');
                             },
-                            child: const Text('5'),
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.blueAccent,
+                            ),
+                            child: const Text(
+                              '5',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                           ExpandedButton(
                             onPressed: () {
                               add('6');
                             },
-                            child: const Text('6'),
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.blueAccent,
+                            ),
+                            child: const Text(
+                              '6',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                         ],
                       ),
@@ -142,19 +193,37 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('1');
                             },
-                            child: const Text('1'),
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.blueAccent,
+                            ),
+                            child: const Text(
+                              '1',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                           ExpandedButton(
                             onPressed: () {
                               add('2');
                             },
-                            child: const Text('2'),
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.blueAccent,
+                            ),
+                            child: const Text(
+                              '2',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                           ExpandedButton(
                             onPressed: () {
                               add('3');
                             },
-                            child: const Text('3'),
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.blueAccent,
+                            ),
+                            child: const Text(
+                              '3',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                         ],
                       ),
@@ -165,19 +234,37 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('0');
                             },
-                            child: const Text('0'),
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.blueAccent,
+                            ),
+                            child: const Text(
+                              '0',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                           ExpandedButton(
                             onPressed: () {
                               add('.');
                             },
-                            child: const Text('.'),
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.blueAccent,
+                            ),
+                            child: const Text(
+                              '.',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                           ExpandedButton(
                             onPressed: () {
                               getResult();
                             },
-                            child: const Text('='),
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.blue[50],
+                            ),
+                            child: const Text(
+                              '=',
+                              style: TextStyle(color: Colors.black),
+                            ),
                           ),
                         ],
                       ),
@@ -190,32 +277,53 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       ExpandedButton(
+                        onPressed: () {
+                          add('÷');
+                        },
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.blue[50],
+                        ),
                         child: Image.asset(
                           "icons/divide.png",
                           width: 10.0,
                           height: 10.0,
                         ),
-                        onPressed: () {
-                          add('÷');
-                        },
                       ),
                       ExpandedButton(
                         onPressed: () {
                           add('x');
                         },
-                        child: const Text('x'),
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.blue[50],
+                        ),
+                        child: const Text(
+                          'x',
+                          style: TextStyle(color: Colors.black),
+                        ),
                       ),
                       ExpandedButton(
                         onPressed: () {
                           add('-');
                         },
-                        child: const Text('-'),
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.blue[50],
+                        ),
+                        child: const Text(
+                          '-',
+                          style: TextStyle(color: Colors.black),
+                        ),
                       ),
                       ExpandedButton(
                         onPressed: () {
                           add('+');
                         },
-                        child: const Text('+'),
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.blue[50],
+                        ),
+                        child: const Text(
+                          '+',
+                          style: TextStyle(color: Colors.black),
+                        ),
                       ),
                     ],
                   ),
@@ -238,18 +346,24 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
 }
 
 class ExpandedButton extends StatelessWidget {
-  const ExpandedButton(
-      {super.key, required this.onPressed, required this.child});
+  const ExpandedButton({
+    super.key,
+    required this.onPressed,
+    required this.child,
+    this.style,
+  });
 
   final Widget child;
   final VoidCallback onPressed;
+  final ButtonStyle? style;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       flex: 1,
-      child: ElevatedButton(
+      child: OutlinedButton(
         onPressed: onPressed,
+        style: style,
         child: child,
       ),
     );
