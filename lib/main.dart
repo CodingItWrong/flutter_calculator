@@ -89,105 +89,97 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Expanded(
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            ExpandedButton(
-                              onPressed: () {
-                                add('7');
-                              },
-                              child: const Text('7'),
-                            ),
-                            ExpandedButton(
-                              onPressed: () {
-                                add('8');
-                              },
-                              child: const Text('8'),
-                            ),
-                            ExpandedButton(
-                              onPressed: () {
-                                add('9');
-                              },
-                              child: const Text('9'),
-                            ),
-                          ],
-                        ),
+                      ExpandedRow(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          ExpandedButton(
+                            onPressed: () {
+                              add('7');
+                            },
+                            child: const Text('7'),
+                          ),
+                          ExpandedButton(
+                            onPressed: () {
+                              add('8');
+                            },
+                            child: const Text('8'),
+                          ),
+                          ExpandedButton(
+                            onPressed: () {
+                              add('9');
+                            },
+                            child: const Text('9'),
+                          ),
+                        ],
                       ),
-                      Expanded(
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            ExpandedButton(
-                              onPressed: () {
-                                add('4');
-                              },
-                              child: const Text('4'),
-                            ),
-                            ExpandedButton(
-                              onPressed: () {
-                                add('5');
-                              },
-                              child: const Text('5'),
-                            ),
-                            ExpandedButton(
-                              onPressed: () {
-                                add('6');
-                              },
-                              child: const Text('6'),
-                            ),
-                          ],
-                        ),
+                      ExpandedRow(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          ExpandedButton(
+                            onPressed: () {
+                              add('4');
+                            },
+                            child: const Text('4'),
+                          ),
+                          ExpandedButton(
+                            onPressed: () {
+                              add('5');
+                            },
+                            child: const Text('5'),
+                          ),
+                          ExpandedButton(
+                            onPressed: () {
+                              add('6');
+                            },
+                            child: const Text('6'),
+                          ),
+                        ],
                       ),
-                      Expanded(
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            ExpandedButton(
-                              onPressed: () {
-                                add('1');
-                              },
-                              child: const Text('1'),
-                            ),
-                            ExpandedButton(
-                              onPressed: () {
-                                add('2');
-                              },
-                              child: const Text('2'),
-                            ),
-                            ExpandedButton(
-                              onPressed: () {
-                                add('3');
-                              },
-                              child: const Text('3'),
-                            ),
-                          ],
-                        ),
+                      ExpandedRow(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          ExpandedButton(
+                            onPressed: () {
+                              add('1');
+                            },
+                            child: const Text('1'),
+                          ),
+                          ExpandedButton(
+                            onPressed: () {
+                              add('2');
+                            },
+                            child: const Text('2'),
+                          ),
+                          ExpandedButton(
+                            onPressed: () {
+                              add('3');
+                            },
+                            child: const Text('3'),
+                          ),
+                        ],
                       ),
-                      Expanded(
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            ExpandedButton(
-                              onPressed: () {
-                                add('0');
-                              },
-                              child: const Text('0'),
-                            ),
-                            ExpandedButton(
-                              onPressed: () {
-                                add('.');
-                              },
-                              child: const Text('.'),
-                            ),
-                            ExpandedButton(
-                              onPressed: () {
-                                getResult();
-                              },
-                              child: const Text('='),
-                            ),
-                          ],
-                        ),
+                      ExpandedRow(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          ExpandedButton(
+                            onPressed: () {
+                              add('0');
+                            },
+                            child: const Text('0'),
+                          ),
+                          ExpandedButton(
+                            onPressed: () {
+                              add('.');
+                            },
+                            child: const Text('.'),
+                          ),
+                          ExpandedButton(
+                            onPressed: () {
+                              getResult();
+                            },
+                            child: const Text('='),
+                          ),
+                        ],
                       ),
                     ],
                   ),
