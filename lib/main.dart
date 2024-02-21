@@ -93,29 +93,23 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  add('7');
-                                },
-                                child: const Text('7'),
-                              ),
+                            ExpandedButton(
+                              onPressed: () {
+                                add('7');
+                              },
+                              child: const Text('7'),
                             ),
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  add('8');
-                                },
-                                child: const Text('8'),
-                              ),
+                            ExpandedButton(
+                              onPressed: () {
+                                add('8');
+                              },
+                              child: const Text('8'),
                             ),
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  add('9');
-                                },
-                                child: const Text('9'),
-                              ),
+                            ExpandedButton(
+                              onPressed: () {
+                                add('9');
+                              },
+                              child: const Text('9'),
                             ),
                           ],
                         ),
@@ -124,29 +118,23 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  add('4');
-                                },
-                                child: const Text('4'),
-                              ),
+                            ExpandedButton(
+                              onPressed: () {
+                                add('4');
+                              },
+                              child: const Text('4'),
                             ),
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  add('5');
-                                },
-                                child: const Text('5'),
-                              ),
+                            ExpandedButton(
+                              onPressed: () {
+                                add('5');
+                              },
+                              child: const Text('5'),
                             ),
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  add('6');
-                                },
-                                child: const Text('6'),
-                              ),
+                            ExpandedButton(
+                              onPressed: () {
+                                add('6');
+                              },
+                              child: const Text('6'),
                             ),
                           ],
                         ),
@@ -155,29 +143,23 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  add('1');
-                                },
-                                child: const Text('1'),
-                              ),
+                            ExpandedButton(
+                              onPressed: () {
+                                add('1');
+                              },
+                              child: const Text('1'),
                             ),
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  add('2');
-                                },
-                                child: const Text('2'),
-                              ),
+                            ExpandedButton(
+                              onPressed: () {
+                                add('2');
+                              },
+                              child: const Text('2'),
                             ),
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  add('3');
-                                },
-                                child: const Text('3'),
-                              ),
+                            ExpandedButton(
+                              onPressed: () {
+                                add('3');
+                              },
+                              child: const Text('3'),
                             ),
                           ],
                         ),
@@ -186,29 +168,23 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  add('0');
-                                },
-                                child: const Text('0'),
-                              ),
+                            ExpandedButton(
+                              onPressed: () {
+                                add('0');
+                              },
+                              child: const Text('0'),
                             ),
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  add('.');
-                                },
-                                child: const Text('.'),
-                              ),
+                            ExpandedButton(
+                              onPressed: () {
+                                add('.');
+                              },
+                              child: const Text('.'),
                             ),
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  getResult();
-                                },
-                                child: const Text('='),
-                              ),
+                            ExpandedButton(
+                              onPressed: () {
+                                getResult();
+                              },
+                              child: const Text('='),
                             ),
                           ],
                         ),
@@ -221,41 +197,33 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Expanded(
-                        child: ElevatedButton(
-                          child: Image.asset(
-                            "icons/divide.png",
-                            width: 10.0,
-                            height: 10.0,
-                          ),
-                          onPressed: () {
-                            add('÷');
-                          },
+                      ExpandedButton(
+                        child: Image.asset(
+                          "icons/divide.png",
+                          width: 10.0,
+                          height: 10.0,
                         ),
+                        onPressed: () {
+                          add('÷');
+                        },
                       ),
-                      Expanded(
-                        child: ElevatedButton(
-                          onPressed: () {
-                            add('x');
-                          },
-                          child: const Text('x'),
-                        ),
+                      ExpandedButton(
+                        onPressed: () {
+                          add('x');
+                        },
+                        child: const Text('x'),
                       ),
-                      Expanded(
-                        child: ElevatedButton(
-                          onPressed: () {
-                            add('-');
-                          },
-                          child: const Text('-'),
-                        ),
+                      ExpandedButton(
+                        onPressed: () {
+                          add('-');
+                        },
+                        child: const Text('-'),
                       ),
-                      Expanded(
-                        child: ElevatedButton(
-                          onPressed: () {
-                            add('+');
-                          },
-                          child: const Text('+'),
-                        ),
+                      ExpandedButton(
+                        onPressed: () {
+                          add('+');
+                        },
+                        child: const Text('+'),
                       ),
                     ],
                   ),
@@ -275,4 +243,42 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
   void deleteOne() {}
 
   void getResult() {}
+}
+
+class ExpandedButton extends StatelessWidget {
+  const ExpandedButton(
+      {super.key, required this.onPressed, required this.child});
+
+  final Widget child;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: 1,
+      child: ElevatedButton(
+        onPressed: onPressed,
+        child: child,
+      ),
+    );
+  }
+}
+
+class ExpandedRow extends StatelessWidget {
+  const ExpandedRow(
+      {super.key, required this.children, required this.crossAxisAlignment});
+
+  final List<Widget> children;
+  final CrossAxisAlignment crossAxisAlignment;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: 1,
+      child: Row(
+        crossAxisAlignment: crossAxisAlignment,
+        children: children,
+      ),
+    );
+  }
 }
