@@ -1,4 +1,52 @@
 import "package:flutter/material.dart";
+import "calculator.dart";
+
+class ExpandedButton extends StatelessWidget {
+  const ExpandedButton({
+    super.key,
+    required this.onPressed,
+    required this.child,
+    this.style,
+  });
+
+  final Widget child;
+  final VoidCallback onPressed;
+  final ButtonStyle? style;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: 1,
+      child: OutlinedButton(
+        onPressed: onPressed,
+        style: style,
+        child: child,
+      ),
+    );
+  }
+}
+
+class ExpandedRow extends StatelessWidget {
+  const ExpandedRow({
+    super.key,
+    required this.children,
+    required this.crossAxisAlignment,
+  });
+
+  final List<Widget> children;
+  final CrossAxisAlignment crossAxisAlignment;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: 1,
+      child: Row(
+        crossAxisAlignment: crossAxisAlignment,
+        children: children,
+      ),
+    );
+  }
+}
 
 void main() => runApp(const MyApp());
 
@@ -32,7 +80,36 @@ class CalculatorHomePage extends StatefulWidget {
 }
 
 class _CalculatorHomePageState extends State<CalculatorHomePage> {
-  final String _str = "0";
+  String _str = "0";
+  var _calculation = Calculation();
+
+  void add(String a) {
+    setState(() {
+      _calculation.add(a);
+      _str = _calculation.getString();
+    });
+  }
+
+  void deleteAll() {
+    setState(() {
+      _calculation.deleteAll();
+      _str = _calculation.getString();
+    });
+  }
+
+  void deleteOne() {
+    setState(() {
+      _calculation.deleteOne();
+      _str = _calculation.getString();
+    });
+  }
+
+  void getResult() {
+    setState(() {
+      _str = _calculation.getResult().toString();
+    });
+    _calculation = Calculation();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -331,58 +408,6 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  void add(String a) {}
-
-  void deleteAll() {}
-
-  void deleteOne() {}
-
-  void getResult() {}
-}
-
-class ExpandedButton extends StatelessWidget {
-  const ExpandedButton({
-    super.key,
-    required this.onPressed,
-    required this.child,
-    this.style,
-  });
-
-  final Widget child;
-  final VoidCallback onPressed;
-  final ButtonStyle? style;
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      flex: 1,
-      child: OutlinedButton(
-        onPressed: onPressed,
-        style: style,
-        child: child,
-      ),
-    );
-  }
-}
-
-class ExpandedRow extends StatelessWidget {
-  const ExpandedRow(
-      {super.key, required this.children, required this.crossAxisAlignment});
-
-  final List<Widget> children;
-  final CrossAxisAlignment crossAxisAlignment;
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      flex: 1,
-      child: Row(
-        crossAxisAlignment: crossAxisAlignment,
-        children: children,
       ),
     );
   }
