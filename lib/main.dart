@@ -106,9 +106,14 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
 
   void getResult() {
     setState(() {
-      _str = _calculation.getResult().toString();
+      try {
+        _str = _calculation.getResult().toString();
+      } on DivideByZeroException {
+        _str = "You mustn't divide by 0";
+      } finally {
+        _calculation = Calculation();
+      }
     });
-    _calculation = Calculation();
   }
 
   @override
