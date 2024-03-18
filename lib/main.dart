@@ -17,7 +17,7 @@ class ExpandedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       flex: 1,
-      child: OutlinedButton(
+      child: TextButton(
         onPressed: onPressed,
         style: style,
         child: child,
@@ -145,11 +145,11 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
               children: [
                 Expanded(
                   flex: 3,
-                  child: OutlinedButton(
+                  child: TextButton(
                     onPressed: () {
                       deleteAll();
                     },
-                    style: OutlinedButton.styleFrom(
+                    style: TextButton.styleFrom(
                       backgroundColor: Colors.black54,
                     ),
                     child: const Text(
@@ -160,11 +160,11 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                 ),
                 Expanded(
                   flex: 1,
-                  child: OutlinedButton(
+                  child: TextButton(
                     onPressed: () {
                       deleteOne();
                     },
-                    style: OutlinedButton.styleFrom(
+                    style: TextButton.styleFrom(
                       backgroundColor: Colors.black87,
                     ),
                     child: const Text(
@@ -192,7 +192,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('7');
                             },
-                            style: OutlinedButton.styleFrom(
+                            style: TextButton.styleFrom(
                               backgroundColor: Colors.blueAccent,
                             ),
                             child: const Text(
@@ -204,7 +204,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('8');
                             },
-                            style: OutlinedButton.styleFrom(
+                            style: TextButton.styleFrom(
                               backgroundColor: Colors.blueAccent,
                             ),
                             child: const Text(
@@ -216,7 +216,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('9');
                             },
-                            style: OutlinedButton.styleFrom(
+                            style: TextButton.styleFrom(
                               backgroundColor: Colors.blueAccent,
                             ),
                             child: const Text(
@@ -233,7 +233,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('4');
                             },
-                            style: OutlinedButton.styleFrom(
+                            style: TextButton.styleFrom(
                               backgroundColor: Colors.blueAccent,
                             ),
                             child: const Text(
@@ -245,7 +245,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('5');
                             },
-                            style: OutlinedButton.styleFrom(
+                            style: TextButton.styleFrom(
                               backgroundColor: Colors.blueAccent,
                             ),
                             child: const Text(
@@ -257,7 +257,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('6');
                             },
-                            style: OutlinedButton.styleFrom(
+                            style: TextButton.styleFrom(
                               backgroundColor: Colors.blueAccent,
                             ),
                             child: const Text(
@@ -274,7 +274,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('1');
                             },
-                            style: OutlinedButton.styleFrom(
+                            style: TextButton.styleFrom(
                               backgroundColor: Colors.blueAccent,
                             ),
                             child: const Text(
@@ -286,7 +286,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('2');
                             },
-                            style: OutlinedButton.styleFrom(
+                            style: TextButton.styleFrom(
                               backgroundColor: Colors.blueAccent,
                             ),
                             child: const Text(
@@ -298,7 +298,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('3');
                             },
-                            style: OutlinedButton.styleFrom(
+                            style: TextButton.styleFrom(
                               backgroundColor: Colors.blueAccent,
                             ),
                             child: const Text(
@@ -315,7 +315,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('0');
                             },
-                            style: OutlinedButton.styleFrom(
+                            style: TextButton.styleFrom(
                               backgroundColor: Colors.blueAccent,
                             ),
                             child: const Text(
@@ -327,7 +327,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               add('.');
                             },
-                            style: OutlinedButton.styleFrom(
+                            style: TextButton.styleFrom(
                               backgroundColor: Colors.blueAccent,
                             ),
                             child: const Text(
@@ -339,7 +339,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                             onPressed: () {
                               getResult();
                             },
-                            style: OutlinedButton.styleFrom(
+                            style: TextButton.styleFrom(
                               backgroundColor: Colors.blue[50],
                             ),
                             child: const Text(
@@ -361,7 +361,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                         onPressed: () {
                           add('÷');
                         },
-                        style: OutlinedButton.styleFrom(
+                        style: TextButton.styleFrom(
                           backgroundColor: Colors.blue[50],
                         ),
                         child: Image.asset(
@@ -374,7 +374,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                         onPressed: () {
                           add('x');
                         },
-                        style: OutlinedButton.styleFrom(
+                        style: TextButton.styleFrom(
                           backgroundColor: Colors.blue[50],
                         ),
                         child: const Text(
@@ -386,7 +386,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                         onPressed: () {
                           add('-');
                         },
-                        style: OutlinedButton.styleFrom(
+                        style: TextButton.styleFrom(
                           backgroundColor: Colors.blue[50],
                         ),
                         child: const Text(
@@ -398,7 +398,7 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
                         onPressed: () {
                           add('+');
                         },
-                        style: OutlinedButton.styleFrom(
+                        style: TextButton.styleFrom(
                           backgroundColor: Colors.blue[50],
                         ),
                         child: const Text(
